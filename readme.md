@@ -100,6 +100,7 @@ Below is an example representation of the graph:
      ↑       ↓
     (2) → 3 (4)
        ↖ (5)  
+```
 
 ![Floyd-Warshall Graph](graph.png)
 
