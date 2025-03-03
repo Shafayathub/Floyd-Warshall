@@ -3,7 +3,6 @@
 ## Overview
 The **Floyd-Warshall algorithm** is an all-pairs shortest path algorithm used to find the shortest distances between every pair of vertices in a weighted graph. It works efficiently for both directed and undirected graphs and can detect **negative weight cycles**.
 
-
 ## Algorithm Explanation
 The Floyd-Warshall algorithm follows a **dynamic programming** approach and updates the shortest paths by considering each vertex as an intermediate node. It updates the distance matrix iteratively using the following recurrence relation:
 
@@ -81,11 +80,26 @@ int main() {
 
 ## Example Graph
 
-A sample graph used for demonstration:
+## Graph Details
+### **Vertices**
+{0, 1, 2, 3}
 
-- Vertices: `{0, 1, 2, 3}`
-- Weighted edges: `{(0→1,3), (1→2,-2), (2→3,5), (3→1,1)}`
-- The graph contains a **negative weight cycle** if an edge is added that forms a cycle with a net negative sum.
+### **Weighted Edges**
+- **(0 → 1, 3)** → Edge from vertex 0 to vertex 1 with weight **3**  
+- **(2 → 0, -6)** → Edge from vertex 2 to vertex 0 with weight **-6**  
+- **(1 → 2, 2)** → Edge from vertex 1 to vertex 2 with weight **2**  
+- **(1 → 3, 5)** → Edge from vertex 1 to vertex 3 with weight **5**  
+- **(2 → 3, 4)** → Edge from vertex 2 to vertex 3 with weight **4**  
+
+## Visualization
+Below is an example representation of the graph:
+```plaintext
+    (0) → 1 (3)
+     ↑       ↓
+   (-6)     (2)
+     ↑       ↓
+    (2) → 3 (4)
+       ↖ (5)  
 
 ![Floyd-Warshall Graph](graph.png)
 
